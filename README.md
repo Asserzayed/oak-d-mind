@@ -1,4 +1,6 @@
-# depthai-ros
+# OAK-D Mind
+All rights reserved to luxonis for developing depthai for ros
+https://github.com/luxonis/depthai-ros
 main branch supports ROS Melodic, ROS Noetic, ROS2 Foxy & Galactic. Might also work on kinetic too.
 
 
