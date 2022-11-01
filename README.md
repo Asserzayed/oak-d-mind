@@ -27,9 +27,11 @@ sudo wget -qO- https://raw.githubusercontent.com/luxonis/depthai-ros/main/instal
 ```
 if you don't have opencv installed then try `sudo apt install libopencv-dev`
 
+for IMU visualization RVIZ please install IMU tools:
+`sudo apt-get install ros-<YOUR_ROSDISTO>-imu-tools`
 
 if you don't have rosdep installed and not initialized please execute the following steps:
-1. `sudo apt install python-rosdep`(melodic) or `sudo apt install python3-rosdep`
+1. `sudo apt install python-rosdep`(melodic) or `sudo apt install python3-rosdep`(noetic)
 2. `sudo rosdep init`
 3. `rosdep update`
 
