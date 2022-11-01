@@ -92,7 +92,28 @@ For more examples please check the launch files.
 3. `ros2 launch depthai_examples stereo_inertial_node.launch.py` - example node
 For more examples please check the launch files.
 
+### Extra
+## IMU Magdwick
+Launch stereo_inertial_node.launch first.
+`rosrun imu_filter_madgwick imu_filter_node \
+   imu/data_raw:=/stereo_inertial_publisher/imu \
+   imu/data:=/stereo_inertial_publisher/imu/data  \
+   _use_mag:=false \
+   _publish_tf:=false`
+   
+## RTAB-MAP
+`roslaunch rtabmap_ros rtabmap.launch \
+    args:="--delete_db_on_start" \
+    rgb_topic:=/stereo_inertial_publisher/color/image \
+    depth_topic:=/stereo_inertial_publisher/stereo/depth \
+    camera_info_topic:=/stereo_inertial_publisher/color/camera_info \
+    imu_topic:=/stereo_inertial_publisher/imu/data \
+    frame_id:=oak-d_frame \
+    approx_sync:=true \
+    wait_imu_to_init:=true`
 
+## Visualize Model Rotation
+`roslaunch depthai_examples move_cam_model.launch`
 
 ## Running Examples
 
