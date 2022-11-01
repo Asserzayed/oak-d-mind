@@ -1,0 +1,3 @@
+<launch>
+    <node type="tf_broadcaster_imu.py" name="cam_orientation_filter" pkg="depthai_examples"/>
+</launch>
